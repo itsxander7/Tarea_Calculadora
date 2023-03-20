@@ -1,0 +1,196 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{239028AE-77F0-4157-99CD-EE08B1A024A4}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UI</RootNamespace>
+    <AssemblyName>UI</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="templates\assets\css\fontawesome-all.min.css" />
+    <Content Include="templates\assets\css\images\arrow.svg" />
+    <Content Include="templates\assets\css\images\ie\banner-overlay.png" />
+    <Content Include="templates\assets\css\images\overlay.png" />
+    <Content Include="templates\assets\css\main.css" />
+    <Content Include="templates\assets\css\noscript.css" />
+    <Content Include="templates\assets\js\breakpoints.min.js" />
+    <Content Include="templates\assets\js\browser.min.js" />
+    <Content Include="templates\assets\js\jquery.dropotron.min.js" />
+    <Content Include="templates\assets\js\jquery.min.js" />
+    <Content Include="templates\assets\js\jquery.scrollex.min.js" />
+    <Content Include="templates\assets\js\jquery.scrolly.min.js" />
+    <Content Include="templates\assets\js\main.js" />
+    <Content Include="templates\assets\js\util.js" />
+    <Content Include="templates\assets\webfonts\fa-brands-400.svg" />
+    <Content Include="templates\assets\webfonts\fa-regular-400.svg" />
+    <Content Include="templates\assets\webfonts\fa-solid-900.svg" />
+    <Content Include="templates\images\banner.jpg" />
+    <Content Include="templates\images\pic01.jpg" />
+    <Content Include="templates\images\pic02.jpg" />
+    <Content Include="templates\images\pic03.jpg" />
+    <Content Include="templates\images\pic04.jpg" />
+    <Content Include="templates\images\pic05.jpg" />
+    <Content Include="templates\images\pic06.jpg" />
+    <Content Include="templates\images\pic07.jpg" />
+    <Content Include="templates\images\pic08.jpg" />
+    <Content Include="templates\LICENSE.txt" />
+    <Content Include="templates\README.txt" />
+    <Content Include="Web.config" />
+    <Content Include="Web\Calculadora.aspx" />
+    <Content Include="Web\templates_frm.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Web\Calculadora.aspx.cs">
+      <DependentUpon>Calculadora.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Calculadora.aspx.designer.cs">
+      <DependentUpon>Calculadora.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\templates_frm.aspx.cs">
+      <DependentUpon>templates_frm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\templates_frm.aspx.designer.cs">
+      <DependentUpon>templates_frm.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="templates\assets\sass\libs\_breakpoints.scss" />
+    <Content Include="templates\assets\sass\libs\_functions.scss" />
+    <Content Include="templates\assets\sass\libs\_html-grid.scss" />
+    <Content Include="templates\assets\sass\libs\_mixins.scss" />
+    <Content Include="templates\assets\sass\libs\_vars.scss" />
+    <Content Include="templates\assets\sass\libs\_vendor.scss" />
+    <Content Include="templates\assets\sass\main.scss" />
+    <Content Include="templates\assets\sass\noscript.scss" />
+    <Content Include="templates\assets\webfonts\fa-brands-400.eot" />
+    <Content Include="templates\assets\webfonts\fa-brands-400.ttf" />
+    <Content Include="templates\assets\webfonts\fa-brands-400.woff" />
+    <Content Include="templates\assets\webfonts\fa-brands-400.woff2" />
+    <Content Include="templates\assets\webfonts\fa-regular-400.eot" />
+    <Content Include="templates\assets\webfonts\fa-regular-400.ttf" />
+    <Content Include="templates\assets\webfonts\fa-regular-400.woff" />
+    <Content Include="templates\assets\webfonts\fa-regular-400.woff2" />
+    <Content Include="templates\assets\webfonts\fa-solid-900.eot" />
+    <Content Include="templates\assets\webfonts\fa-solid-900.ttf" />
+    <Content Include="templates\assets\webfonts\fa-solid-900.woff" />
+    <Content Include="templates\assets\webfonts\fa-solid-900.woff2" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Web_I_DAL\Web_I_DAL.csproj">
+      <Project>{179DAD52-CBE2-4D98-BCDE-379870F31F45}</Project>
+      <Name>Web_I_DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Web_l_BILL\Web_l_BILL.csproj">
+      <Project>{BFB44A54-0478-47EF-AEB4-0058CB8B0AE0}</Project>
+      <Name>Web_l_BILL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>63751</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:63751/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
